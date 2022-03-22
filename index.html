@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Calculator app</title>
+    <script>
+      localStorage.theme || localStorage.setItem('theme', 'dark');
+      document.documentElement.setAttribute('data-theme', localStorage.theme);
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" type="module"></script>
+  </head>
+  <body>
+    <main id="main">
+      <div id="calc">
+        <header id="calc-header">
+          <h1 aria-label="Calculator">calc</h1>
+          <div id="theme">
+            <h2 aria-label="Theme selector">THEME</h2>
+            <div id="theme-toggles">
+              <label for="dark-toggle" aria-label="Dark theme">1</label>
+              <input type="radio" name="theme-toggle" id="dark-toggle" />
+              <label for="light-toggle" aria-label="Light theme">2</label>
+              <input type="radio" name="theme-toggle" id="light-toggle" />
+              <label for="neon-toggle" aria-label="Neon theme">3</label>
+              <input type="radio" name="theme-toggle" id="neon-toggle" />
+              <div id="theme-toggle-btn"></div>
+            </div>
+          </div>
+        </header>
+        <div id="calc-display">
+          <p id="calc__previous"></p>
+          <p id="calc__current">0</p>
+        </div>
+        <div id="calc-buttons">
+          <button data-calc-number-btn class="calc-main-btn">7</button>
+          <button data-calc-number-btn class="calc-main-btn">8</button>
+          <button data-calc-number-btn class="calc-main-btn">9</button>
+          <button data-calc-delete-btn class="calc-text-btn" aria-label="Delete">DEL</button>
+          <button data-calc-number-btn class="calc-main-btn">4</button>
+          <button data-calc-number-btn class="calc-main-btn">5</button>
+          <button data-calc-number-btn class="calc-main-btn">6</button>
+          <button data-calc-symbol-btn class="calc-main-btn" aria-label="Addition">+</button>
+          <button data-calc-number-btn class="calc-main-btn">1</button>
+          <button data-calc-number-btn class="calc-main-btn">2</button>
+          <button data-calc-number-btn class="calc-main-btn">3</button>
+          <button data-calc-symbol-btn class="calc-main-btn" aria-label="Subtraction">-</button>
+          <button data-calc-dot-btn class="calc-main-btn">.</button>
+          <button data-calc-number-btn class="calc-main-btn">0</button>
+          <button data-calc-symbol-btn class="calc-main-btn" aria-label="Division">/</button>
+          <button data-calc-symbol-btn class="calc-main-btn" aria-label="Multiplication">x</button>
+          <button data-calc-reset-btn class="calc-text-btn">RESET</button>
+          <button data-calc-result-btn class="calc-result-btn" aria-label="Result">=</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://github.com/LucasWeidas" target="_blank">Lucas Weidas</a>.
+      </p>
+    </footer>
+  </body>
+</html>
